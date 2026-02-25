@@ -1,10 +1,30 @@
 const urlAPI = "/db.json"
 const cuerpovideos = document.querySelector("[data-videos]");
 
+/**
+ * Obtener videos del db.json
+ */
 async function conexionAPI() {
     let conexion = await fetch(urlAPI);
     let datos = await conexion.json();
     return datos.videos;
+}
+
+/**
+ * Obtener videos guardados en localStorage
+ */
+function obtenerVideosGuardados() {
+    const videosGuardados = localStorage.getItem('videosPublicados');
+    return videosGuardados ? JSON.parse(videosGuardados) : [];
+}
+
+/**
+ * Obtener todos los videos (db.json + localStorage)
+ */
+async function obtenerTodosLosVideos() {
+    const videosDelDB = await conexionAPI();
+    const videosGuardados = obtenerVideosGuardados();
+    return [...videosDelDB, ...videosGuardados];
 }
 
 function crearFicha(id, titulo, portada, url) {
@@ -24,8 +44,7 @@ function crearFicha(id, titulo, portada, url) {
     return ficha;
 }
 
-async function eliminarFichas() {
-    let listaVideos = await conexionAPI();
+async function manejarClickEnVideos() {
     let video = document.querySelectorAll(".imagen");
     
     video.forEach(clases => clases.addEventListener("click", evento => {
@@ -37,8 +56,6 @@ async function eliminarFichas() {
 
         mostrarVideo(idVideo);
     }));
-
-    
 }
 
 function hojaDeEstilosParaVideo(archivo = false) {
@@ -55,7 +72,7 @@ async function mostrarVideo(idVideo) {
     let listaVideos = await conexionAPI();
     let videoEncontrado = listaVideos.find(video => video.id === idVideo);
     let idDrive = videoEncontrado.idDrive;
-
+obtenerTodosLosVideos
     let video = document.createElement("div");
     video.className = "video-responsive";
     video.innerHTML = 
@@ -77,9 +94,9 @@ async function mostrarVideo(idVideo) {
 }
 
 async function obtenerYMostrarVideos() {
-    let listaVideos = await conexionAPI();
+    let listaVideos = await obtenerTodosLosVideos();
     listaVideos.forEach(video => cuerpovideos.appendChild(crearFicha(video.id, video.titulo, video.portada, "#")));
 }
 
 obtenerYMostrarVideos();
-eliminarFichas();
+manejarClickEnVideos();
