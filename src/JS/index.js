@@ -1,11 +1,10 @@
-const urlAPI = "/api/videos"
+const urlAPI = "/db.json"
 const cuerpovideos = document.querySelector("[data-videos]");
 
 async function conexionAPI() {
     let conexion = await fetch(urlAPI);
-    let conexionConvertidaJSON = conexion.json();
-
-    return conexionConvertidaJSON;
+    let datos = await conexion.json();
+    return datos.videos;
 }
 
 function crearFicha(id, titulo, portada, url) {

@@ -15,10 +15,6 @@
     {
       "route": "/__/auth/logout",
       "redirect": "/"
-    },
-    {
-      "route": "/api/*",
-      "allowedRoles": ["anonymous"]
     }
   ],
   "navigationFallback": {
