@@ -1,0 +1,30 @@
+{
+  "routes": [
+    {
+      "route": "/__/auth/login/aad",
+      "redirect": "/.auth/login/aad"
+    },
+    {
+      "route": "/__/auth/login/github",
+      "redirect": "/.auth/login/github"
+    },
+    {
+      "route": "/__/auth/login/twitter",
+      "redirect": "/.auth/login/twitter"
+    },
+    {
+      "route": "/__/auth/logout",
+      "redirect": "/"
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "mimeTypes": {
+    ".json": "application/json"
+  }
+}

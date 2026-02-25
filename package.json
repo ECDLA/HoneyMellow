@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx json-server --watch db.json --port 3001"
+    "test": "npx json-server --watch src/db.json --port 3001",
+    "build": "npm install && cd api && npm install"
   },
   "author": "",
   "license": "ISC",

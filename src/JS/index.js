@@ -1,4 +1,4 @@
-const urlAPI = "http://localhost:3001/videos"
+const urlAPI = "/api/videos"
 const cuerpovideos = document.querySelector("[data-videos]");
 
 async function conexionAPI() {
