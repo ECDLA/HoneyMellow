@@ -1,77 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Videos</title>
 
+    <!--* --------  Favicon  -------- -->
+    <link rel="icon" type="image/x-icon" href="IMG/favicon.svg">
+
+    <!--* --------  Hojas de estilos  -------- -->
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/variables.css">
+    <!-- <link rel="stylesheet" href="CSS/styles.css"> -->
+    
+    <!--* --------  Fuentes  -------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <main>
-        <div>
-            <picture>
-                <img src="IMG/portada2.jpg" alt="">
-            </picture>
+    <header>
+        <link rel="stylesheet" href="CSS/styles.css" data-styles>
+        <figure id="logo-padre">
+            <a href="index.html">
+                <img id="logo" src="IMG/logo.png" alt="Logo HoneyWorks Mellow">
+            </a>
+        </figure>
 
-            <p>Hoka no Yatsu ni Iku Nante sa / 他のやつにいくなんてさ [No quiero que te vayas con otro]</p>
-        </div>
+        <nav>
+            <a class="anclas" href="#">VoiComic</a>
+            <a class="anclas" href="#">Screenshot</a>
+            <a class="anclas" href="#">Novelas</a>
+            <a class="anclas" href="#">Sin MV</a>
+            <a class="anclas" href="#">Anime</a>
+        </nav>
+    </header>
 
-        <div>
-            <picture>
-                <img src="IMG/portada.jpg" alt="">
-            </picture>
-
-            <p>17 Sai / 17歳 [17 años]</p>
-        </div>
-
-        <div>
-            <picture>
-                <img src="IMG/portada3.jpg" alt="">
-            </picture>
-
-            <p>Tokyo Spring Session / 東京スプリングセッション [Sesión de Primavera en Tokio]</p>
-        </div>
-
-        <div>
-            <picture>
-                <img src="IMG/portada.jpg" alt="">
-            </picture>
-
-            <p>17 Sai / 17歳 [17 años]</p>
-        </div>
-
-        <div>
-            <picture>
-                <img src="IMG/portada.jpg" alt="">
-            </picture>
-
-            <p>17 Sai / 17歳 [17 años]</p>
-        </div>
-
-        <div>
-            <picture>
-                <img src="IMG/portada.jpg" alt="">
-            </picture>
-
-            <p>17 Sai / 17歳 [17 años]</p>
-        </div>
-
-        <div>
-            <picture>
-                <img src="IMG/portada.jpg" alt="">
-            </picture>
-
-            <p>17 Sai / 17歳 [17 años]</p>
-        </div>
+    <main data-videos>
+        <!-- <div class="video">
+            <a href="VIDEO/95.html">
+                <figure class="imagen">
+                    <img class="miniatura" src="IMG/Miniaturas/95.webp" alt="miniatura video">
+                </figure>
+            </a>
+            <p>95 - Ao e [El azul]</p>
+        </div> -->
     </main>
-</body>
 
+    <footer>
+        <div id="favicon-padre">
+            <img id="favicon" src="IMG/favicon.svg" alt="">
+            <p>V0.0.2</p>
+        </div>
+
+        <div id="creditos">
+            <div id="pagina">
+                <p class="margen">Pagina echa por</p>
+                <a class="enlace" href="https://twitter.com/_Naoko__">Naoko</a>
+            </div>
+            
+            <div id="videos">
+                <p class="margen">Videos y traducción</p>
+                <a href="https://twitter.com/PokespeFrantic" target="_blank" class="enlace">Yami</a>
+            </div>
+
+            <div id="autor">
+                <p class="margen">Contenido original</p>
+                <a href="https://twitter.com/HoneyWorks_828" target="_blank" class="enlace">HoneyWorks</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/index.js"></script>
+</body>
 </html>

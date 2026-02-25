@@ -1,0 +1,200 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-letra);
+    background-color: #f2f2f2;
+}
+
+p, figure {
+    margin: 0px;
+}
+
+
+/*  ^======================================
+    ^=               Header               =
+    ^======================================  */
+header {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    background: linear-gradient(180deg, pink, #f2f2f2);
+    justify-content: center;
+    padding: 13px 30px;
+
+    display: grid;
+}
+
+#logo-padre {
+    position: relative;
+    display: flex;
+    margin: 0px;
+    width: 100%;
+}
+
+#logo-padre::after{
+    text-decoration: none;
+    content: "Pre-alpha";
+    letter-spacing: 1px;
+    font-style: italic;    
+    margin-left: -15px;
+    font-weight: bold;
+    align-items: end;
+    color: #a8173e;
+    display: flex;
+}
+
+#logo {
+    height: 45px;
+    border: 0px;
+}
+
+nav {
+    justify-content: end;
+    align-items: center;
+    display: flex;
+}
+
+.anclas {
+    text-decoration: none;
+    color: #40182362;
+    margin: 0px 10px;
+}
+
+.anclas:hover {
+    color: #220c1279;
+    font-weight: bold;
+}
+/*  ^=====  Fin de Header  ======  */
+
+
+
+
+/*  ^====================================
+    ^=               Main               =
+    ^====================================*  */
+main {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    margin: 20px 30px;
+    display: grid;
+    gap: 30px;
+}
+
+.video {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.video p {
+    margin: 8px 8px;
+}
+
+.video a {
+    color: var(--color-letra);
+    text-decoration: none;
+}
+
+.miniatura {
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.432);
+    width: 100%;
+}
+
+.imagen {
+    text-align: center;
+    transition: 0.3s;
+    margin: 0px;
+}
+
+.imagen:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.imagen img {
+    border-radius: 5px;
+    width: 100%;
+}
+/*  ^=====  Fin de Main  ======  */
+
+/* - - - - - FOOTER - - - - - */
+#favicon-padre {
+    text-align: center;
+}
+
+#favicon {
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+#creditos {
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    text-align: center;
+    margin-top: 30px;
+    display: grid;
+}
+
+#pagina img {
+    display: flex;
+}
+
+.margen {
+    margin-bottom: 5px;
+}
+
+.enlace {
+    color: var(--color-letra-resaltado);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace:hover {
+    color: var(--color-letra);
+}
+
+/* - - - - - MOVIL - - - - - */
+@media (max-width: 865px) {
+
+    /* - - - - - ENCABEZADO - - - - - */
+    nav {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+        display: block;
+    }
+
+    #logo-padre {
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+}
+
+@media (max-width: 500px) {
+    /* - - - - - MAIN - - - - - */
+    main {
+        margin: 15px 10px;
+    }
+    
+    .video {
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        align-items: center;
+        display: grid;
+    }
+    
+    .video p {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    #creditos {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+
+    #autor {
+        grid-column-start: 1;
+        margin-bottom: 15px;
+        grid-column-end: 3;
+        margin-top: 15px;
+    }
+}

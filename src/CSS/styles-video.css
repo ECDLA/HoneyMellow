@@ -1,0 +1,255 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-letra);
+    background-color: #f2f2f2;
+}
+
+p,
+figure {
+    margin: 0px;
+}
+
+/* - - - - - ENCABEZADO - - - - - */
+header {
+    padding: 13px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    background: linear-gradient(180deg, pink, #f2f2f2);
+    justify-content: center;
+}
+
+#logo-padre {
+    margin: 0px;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+#logo-padre::after {
+    content: "Pre-alpha";
+    color: #a8173e;
+    margin-left: -15px;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: italic;
+    display: flex;
+    align-items: end;
+    letter-spacing: 1px;
+}
+
+#logo {
+    border: 0px;
+    height: 45px;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.anclas {
+    color: #40182362;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+.anclas:hover {
+    color: #220c1279;
+    font-weight: bold;
+}
+
+/* - - - - - FOOTER - - - - - */
+footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#favicon-padre {
+    text-align: center;
+}
+
+#favicon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+#creditos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    text-align: center;
+}
+
+#pagina img {
+    display: flex;
+}
+
+.margen {
+    margin-bottom: 5px;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--color-letra-resaltado);
+    font-weight: bold;
+}
+
+.enlace:hover {
+    color: var(--color-letra);
+}
+
+/* - - - - - MAIN - - - - - */
+h1 {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 20px 30px;
+    color: var(--color-letra);
+}
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 0px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#datos {
+    margin-left: 20px;
+}
+
+#contenido {
+    color: var(--color-texto);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+/* - - - - - ASIDE - - - - - */
+aside {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    margin: 40px 30px;
+}
+
+.video {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.video p {
+    margin: 8px 8px;
+}
+
+.video a {
+    text-decoration: none;
+    color: var(--color-letra);
+}
+
+.miniatura {
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.432);
+}
+
+.imagen {
+    margin: 0px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.imagen:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* - - - - - TABLET - - - - - */
+@media (max-width: 865px) {
+
+    /* - - - - - ENCABEZADO - - - - - */
+    nav {
+        display: none;
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    #logo-padre {
+        justify-content: center;
+    }
+}
+
+/* - - - - - MOVIL - - - - - */
+@media (max-width: 500px) {
+
+    /* - - - - - FOOTER - - - - - */
+    #creditos {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+
+    #autor {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    /* - - - - - MAIN - - - - - */
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        margin: 0px 10px;
+    }
+
+    #datos {
+        margin: 20px 0px;
+    }
+
+    .video-responsive {
+        margin: 0px -10px;
+        border-radius: 0px;
+    }
+
+    /* - - - - - ASIDE - - - - - */
+    aside {
+        margin: 20px 10px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .video {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        align-items: center;
+    }
+    
+    .video p {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+}
