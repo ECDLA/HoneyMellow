@@ -1,13 +1,22 @@
-const urlAPI = "/db.json"
-const cuerpovideos = document.querySelector("[data-videos]");
+// const urlAPI = "/db.json"
+// const cuerpovideos = document.querySelector("[data-videos]");
 
-/**
- * Obtener videos del db.json
- */
+// /**
+//  * Obtener videos del db.json
+//  */
+// async function conexionAPI() {
+//     let conexion = await fetch(urlAPI);
+//     let datos = await conexion.json();
+//     return datos.videos;
+// }
+
 async function conexionAPI() {
-    let conexion = await fetch(urlAPI);
-    let datos = await conexion.json();
-    return datos.videos;
+    // La URL de tu Azure Function que sirve de puente
+    const response = await fetch('https://mellow-db.documents.azure.com:443/');
+    const videos = await response.json();
+    
+    console.log("Videos traídos desde Azure:", videos);
+    // Aquí ya puedes renderizar tus portadas y títulos como el de "Julieta" o "Ao e"
 }
 
 /**
