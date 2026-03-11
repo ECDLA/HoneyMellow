@@ -1,0 +1,11 @@
+{
+  "name": "mellow-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for HoneyMellow",
+  "scripts": {
+    "build": "echo build"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.9.1"
+  }
+}
