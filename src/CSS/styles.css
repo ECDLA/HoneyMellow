@@ -113,6 +113,10 @@ main {
 /*  ^=====  Fin de Main  ======  */
 
 /* - - - - - FOOTER - - - - - */
+footer {
+    margin-bottom: 25px;
+}
+
 #favicon-padre {
     text-align: center;
 }

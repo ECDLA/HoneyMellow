@@ -1,39 +1,21 @@
-// const urlAPI = "/db.json"
-// const cuerpovideos = document.querySelector("[data-videos]");
-
-// /**
-//  * Obtener videos del db.json
-//  */
-// async function conexionAPI() {
-//     let conexion = await fetch(urlAPI);
-//     let datos = await conexion.json();
-//     return datos.videos;
-// }
+const urlAPI = "http://localhost:7071/api/FunctionMellowAPI"
+const cuerpovideos = document.querySelector("[data-videos]");
+let cacheDeVideos = null;
 
 async function conexionAPI() {
-    // La URL de tu Azure Function que sirve de puente
-    const response = await fetch('https://mellow-db.documents.azure.com:443/');
-    const videos = await response.json();
+    try {
+        if (cacheDeVideos) {
+            return cacheDeVideos;
+        }
+        let conexion = await fetch(urlAPI);
+        let conexionConvertidaJSON = await conexion.json();
     
-    console.log("Videos traídos desde Azure:", videos);
-    // Aquí ya puedes renderizar tus portadas y títulos como el de "Julieta" o "Ao e"
-}
-
-/**
- * Obtener videos guardados en localStorage
- */
-function obtenerVideosGuardados() {
-    const videosGuardados = localStorage.getItem('videosPublicados');
-    return videosGuardados ? JSON.parse(videosGuardados) : [];
-}
-
-/**
- * Obtener todos los videos (db.json + localStorage)
- */
-async function obtenerTodosLosVideos() {
-    const videosDelDB = await conexionAPI();
-    const videosGuardados = obtenerVideosGuardados();
-    return [...videosDelDB, ...videosGuardados];
+        cacheDeVideos = conexionConvertidaJSON;
+        return conexionConvertidaJSON;
+        
+    } catch (error) {
+        console.error("Error al conectar a la base de datos", error);
+    }
 }
 
 function crearFicha(id, titulo, portada, url) {
@@ -53,9 +35,10 @@ function crearFicha(id, titulo, portada, url) {
     return ficha;
 }
 
-async function manejarClickEnVideos() {
+async function eliminarFichas() {
+    // let listaVideos = await conexionAPI();
     let video = document.querySelectorAll(".imagen");
-    
+
     video.forEach(clases => clases.addEventListener("click", evento => {
         let idVideo = evento.target.id;
 
@@ -65,6 +48,8 @@ async function manejarClickEnVideos() {
 
         mostrarVideo(idVideo);
     }));
+
+    
 }
 
 function hojaDeEstilosParaVideo(archivo = false) {
@@ -81,7 +66,7 @@ async function mostrarVideo(idVideo) {
     let listaVideos = await conexionAPI();
     let videoEncontrado = listaVideos.find(video => video.id === idVideo);
     let idDrive = videoEncontrado.idDrive;
-obtenerTodosLosVideos
+
     let video = document.createElement("div");
     video.className = "video-responsive";
     video.innerHTML = 
@@ -103,9 +88,13 @@ obtenerTodosLosVideos
 }
 
 async function obtenerYMostrarVideos() {
-    let listaVideos = await obtenerTodosLosVideos();
-    listaVideos.forEach(video => cuerpovideos.appendChild(crearFicha(video.id, video.titulo, video.portada, "#")));
+    let listaVideos = await conexionAPI();
+    listaVideos.forEach(video =>
+        cuerpovideos.appendChild(crearFicha(video.id, video.titulo, video.portada, "#"))
+    );
+
+    eliminarFichas();
 }
 
 obtenerYMostrarVideos();
-manejarClickEnVideos();
+eliminarFichas();

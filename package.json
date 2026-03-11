@@ -2,13 +2,13 @@
   "name": "honeymellow-pre-alpha",
   "version": "0.0.2",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "npx json-server --watch src/db.json --port 3001"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@azure/cosmos": "^4.9.1",
     "json-server": "^0.17.4"
   }
 }
