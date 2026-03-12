@@ -21,7 +21,7 @@ module.exports = async function (context, req) {
     context.res = {
         status: 200,
         headers: {
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "https://agreeable-tree-0b751a910.4.azurestaticapps.net/"
         },
         body: listaVideos,
     }
