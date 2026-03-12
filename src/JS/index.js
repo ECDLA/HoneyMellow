@@ -19,12 +19,12 @@ async function conexionAPI() {
     }
 }
 
-function crearFicha(id, titulo, portada, url) {
+function crearFicha(id, titulo, portada, idDrive) {
     let ficha = document.createElement("div");
     ficha.className = "video";
     ficha.innerHTML = 
     `
-        <a href="${url}">
+        <a href="https://drive.google.com/file/d/${idDrive}/preview" target="_blank">
             <figure class="imagen">
                 <img class="miniatura" class="miniatura" src="${portada}" alt="" id="${id}">
             </figure>
@@ -40,7 +40,7 @@ async function eliminarFichas() {
     // let listaVideos = await conexionAPI();
     let video = document.querySelectorAll(".imagen");
 
-    video.forEach(clases => clases.addEventListener("click", evento => {
+    video.forEach(clases => clases.addEventListener("click", evento => {        
         let idVideo = evento.target.id;
 
         while(cuerpovideos.firstChild) {
@@ -91,11 +91,11 @@ async function mostrarVideo(idVideo) {
 async function obtenerYMostrarVideos() {
     let listaVideos = await conexionAPI();
     listaVideos.forEach(video =>
-        cuerpovideos.appendChild(crearFicha(video.id, video.titulo, video.portada, "#"))
+        cuerpovideos.appendChild(crearFicha(video.id, video.titulo, video.portada, video.idDrive))
     );
 
-    eliminarFichas();
+    // eliminarFichas();
 }
 
 obtenerYMostrarVideos();
-eliminarFichas();
+// eliminarFichas();
