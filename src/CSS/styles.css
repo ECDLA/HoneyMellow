@@ -30,7 +30,7 @@ header {
 
 #logo-padre::after{
     text-decoration: none;
-    content: "Pre-alpha";
+    content: "V0.1.2-alpha";
     letter-spacing: 1px;
     font-style: italic;    
     margin-left: -15px;
@@ -53,12 +53,17 @@ nav {
 
 .anclas {
     text-decoration: none;
-    color: #40182362;
+    color: #40182398;
     margin: 0px 10px;
 }
 
-.anclas:hover {
-    color: #220c1279;
+.enable {
+    color: #401823;
+    font-weight: bold;
+}
+
+.enable:hover {
+    color: #4018299c;
     font-weight: bold;
 }
 /*  ^=====  Fin de Header  ======  */

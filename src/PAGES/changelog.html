@@ -7,12 +7,12 @@
     <title>Videos</title>
 
     <!--* --------  Favicon  -------- -->
-    <link rel="icon" type="image/x-icon" href="IMG/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/IMG/favicon.svg">
 
     <!--* --------  Hojas de estilos  -------- -->
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/variables.css">
-    <link rel="stylesheet" href="CSS/styles.css" data-styles>
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/styles.css" data-styles>
     
     <!--* --------  Fuentes  -------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,36 +22,53 @@
 <body>
     <header>
         <figure id="logo-padre">
-            <a href="index.html">
-                <img id="logo" src="IMG/logo.png" alt="Logo HoneyWorks Mellow">
+            <a href="../index.html">
+                <img id="logo" src="../IMG/logo.png" alt="Logo HoneyWorks Mellow">
             </a>
         </figure>
 
         <nav>
+            <a class="anclas enable" href="../index.html">Videos</a>
             <a class="anclas" href="#">VoiComic</a>
             <a class="anclas" href="#">Screenshot</a>
             <a class="anclas" href="#">Novelas</a>
             <a class="anclas" href="#">Sin MV</a>
             <a class="anclas" href="#">Anime</a>
-            <a class="anclas enable" href="PAGES/changelog.html">Changelog</a>
             <!-- <a class="anclas" href="PAGES/publicarVideo.html">Publicar Video</a> -->
         </nav>
     </header>
 
-    <main data-videos>
-        <!-- <div class="video">
-            <a href="VIDEO/95.html">
-                <figure class="imagen">
-                    <img class="miniatura" src="IMG/Miniaturas/95.webp" alt="miniatura video">
-                </figure>
-            </a>
-            <p>95 - Ao e [El azul]</p>
-        </div> -->
+    <main style="display: block;">
+        <div>
+            <h2>[0.1.2-alpha] - 2026-03-13</h2>
+            <ul>
+                <li><b>Feat (Contenido): </b>Se agregaron 7 nuevos videos a la base de datos.</li>
+                <li><b>Refactor (Mejora): </b>Implementación de ordenamiento descendente por ID, para visualizar primero los videos más recientes.</li>
+                <li><b>Feat (Nuevo): </b>Implementación de página "Changelog".</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>[0.1.1-alpha] - 2026-03-12</h2>
+            <ul>
+                <li><p><b>Feat (Contenido): </b>Se publican 10 videos en la base de datos.</p></li>
+                <li><p><b>Refactor (Sistema): </b>Se integra la API desde Cosmos DB con Azure functions.</p></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>[0.1.0-alpha] - 2026-03-12</h2>
+            <ul>
+                <li><p><b>Chore (Sistema): </b>Se publica en Azure Static Web App.</p></li>
+                <li><p><b>Chore (Sistema): </b>Se crea la base de datos en Cosmos DB.</p></li>
+            </ul>
+            <br>
+        </div>
     </main>
 
     <footer>
         <div id="favicon-padre">
-            <img id="favicon" src="IMG/favicon.svg" alt="">
+            <img id="favicon" src="../IMG/favicon.svg" alt="">
             <p>V0.1.2-alpha</p>
         </div>
 
@@ -73,6 +90,6 @@
         </div>
     </footer>
 
-    <script src="JS/index.js"></script>
+    <!-- <script src="../JS/index.js"></script> -->
 </body>
 </html>

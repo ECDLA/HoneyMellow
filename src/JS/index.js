@@ -10,10 +10,10 @@ async function conexionAPI() {
         }
         let conexion = await fetch(urlAPI);
         let conexionConvertidaJSON = await conexion.json();
-    
+
         cacheDeVideos = conexionConvertidaJSON;
         return conexionConvertidaJSON;
-        
+
     } catch (error) {
         console.error("Error al conectar a la base de datos", error);
     }
@@ -22,8 +22,8 @@ async function conexionAPI() {
 function crearFicha(id, titulo, portada, idDrive) {
     let ficha = document.createElement("div");
     ficha.className = "video";
-    ficha.innerHTML = 
-    `
+    ficha.innerHTML =
+        `
         <a href="https://drive.google.com/file/d/${idDrive}/preview" target="_blank">
             <figure class="imagen">
                 <img class="miniatura" class="miniatura" src="${portada}" alt="" id="${id}">
@@ -40,17 +40,17 @@ async function eliminarFichas() {
     // let listaVideos = await conexionAPI();
     let video = document.querySelectorAll(".imagen");
 
-    video.forEach(clases => clases.addEventListener("click", evento => {        
+    video.forEach(clases => clases.addEventListener("click", evento => {
         let idVideo = evento.target.id;
 
-        while(cuerpovideos.firstChild) {
+        while (cuerpovideos.firstChild) {
             cuerpovideos.removeChild(cuerpovideos.firstChild);
         }
 
         mostrarVideo(idVideo);
     }));
 
-    
+
 }
 
 function hojaDeEstilosParaVideo(archivo = false) {
@@ -70,15 +70,15 @@ async function mostrarVideo(idVideo) {
 
     let video = document.createElement("div");
     video.className = "video-responsive";
-    video.innerHTML = 
-    `
+    video.innerHTML =
+        `
        <iframe src="https://drive.google.com/file/d/${idDrive}/preview" frameborder="0" allowfullscreen></iframe>
     `
 
     let informacionVideo = document.createElement("div");
     informacionVideo.id = "datos";
-    informacionVideo.innerHTML = 
-    `
+    informacionVideo.innerHTML =
+        `
         <h1>${videoEncontrado.id} - ${videoEncontrado.titulo}</h1>
         <p id="contenido">${videoEncontrado.descripcion}</p>
     `
@@ -89,9 +89,23 @@ async function mostrarVideo(idVideo) {
 }
 
 async function obtenerYMostrarVideos() {
+    // Hace una llamada a la API entregando un array de objetos
     let listaVideos = await conexionAPI();
-    listaVideos.forEach(video =>
-        cuerpovideos.appendChild(crearFicha(video.id, video.titulo, video.portada, video.idDrive))
+
+    // Ordena la lista mediante la función .sort()
+    console.log(listaVideos.sort(
+        // .sort () envia dos númeos a comprar a la función anonima
+        function comparar(a, b) {
+            // Compara cuanto es la resta y si es negativo entonces a va delante de b [b, a]
+            return Number(b.id) - Number(a.id);
+        }
+    ));
+    
+    listaVideos.forEach(video => {
+        cuerpovideos.appendChild(
+            crearFicha(video.id, video.titulo, video.portada, video.idDrive)
+        );
+    }
     );
 
     // eliminarFichas();
