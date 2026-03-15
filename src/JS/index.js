@@ -1,5 +1,5 @@
 // const urlAPI = "https://mellow-api.azurewebsites.net/api/FunctionMellowAPI"
-const urlAPI = "/src/db.json" // Local
+const urlAPI = "/db.json"
 const cuerpovideos = document.querySelector("[data-videos]");
 let cacheDeVideos = null;
 
