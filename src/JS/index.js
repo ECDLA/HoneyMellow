@@ -1,39 +1,63 @@
-// const urlAPI = "http://localhost:7071/api/FunctionMellowAPI" // Local
-const urlAPI = "https://mellow-api.azurewebsites.net/api/FunctionMellowAPI"
+// const urlAPI = "https://mellow-api.azurewebsites.net/api/FunctionMellowAPI"
+const urlAPI = "/src/db.json" // Local
 const cuerpovideos = document.querySelector("[data-videos]");
 let cacheDeVideos = null;
 
 async function conexionAPI() {
     try {
-        if (cacheDeVideos) {
-            return cacheDeVideos;
-        }
         let conexion = await fetch(urlAPI);
-        let conexionConvertidaJSON = await conexion.json();
+        let conexionConvertidaJSON = await conexion.json()
 
-        cacheDeVideos = conexionConvertidaJSON;
-        return conexionConvertidaJSON;
+        // Quitar .videos cuando se use la API
+        return conexionConvertidaJSON.videos;
 
     } catch (error) {
         console.error("Error al conectar a la base de datos", error);
     }
 }
 
-function crearFicha(id, titulo, portada, idDrive) {
+function crearFicha(id, tituloRomaji, tituloEspañol, portada, urlDrive) {
     let ficha = document.createElement("div");
     ficha.className = "video";
     ficha.innerHTML =
         `
-        <a href="https://drive.google.com/file/d/${idDrive}/preview" target="_blank">
+        <a href="https://drive.google.com/file/d/${obtenerIdDrive(urlDrive)}/preview" target="_blank">
             <figure class="imagen">
-                <img class="miniatura" class="miniatura" src="${portada}" alt="" id="${id}">
+                <img class="miniatura" class="miniatura" src="IMG/Miniaturas/${id}.webp" alt="" id="${id}">
             </figure>
         </a>
 
-        <p>${id} - ${titulo}</p>
+        <p>${id} - ${tituloRomaji} ${tituloEspañol}</p>
     `
 
     return ficha;
+}
+
+async function obtenerYMostrarVideos() {
+    // Hace una llamada a la API entregando un array de objetos
+    let listaVideos = await conexionAPI();
+
+    // Ordena la lista mediante la función .sort()
+    listaVideos.sort(
+        // .sort () envia dos númeos a comprar a la función anonima
+        function comparar(a, b) {
+            // Compara cuanto es la resta y si es negativo entonces a va delante de b [b, a]
+            return Number(b.id) - Number(a.id);
+        }
+    );
+    console.log(listaVideos)
+    listaVideos.forEach(video => {
+        cuerpovideos.appendChild(
+            crearFicha(video.id, video.tituloRomaji, video.tituloEspañol, video.portada, video.urlDrive)
+        );
+    }
+    );
+
+    // eliminarFichas();
+}
+
+function obtenerIdDrive(urlDrive) {
+    return urlDrive.slice(32, 65);
 }
 
 async function eliminarFichas() {
@@ -83,32 +107,9 @@ async function mostrarVideo(idVideo) {
         <p id="contenido">${videoEncontrado.descripcion}</p>
     `
 
-    hojaDeEstilosParaVideo(true);
+    // hojaDeEstilosParaVideo(true);
     cuerpovideos.appendChild(video);
     cuerpovideos.appendChild(informacionVideo);
-}
-
-async function obtenerYMostrarVideos() {
-    // Hace una llamada a la API entregando un array de objetos
-    let listaVideos = await conexionAPI();
-
-    // Ordena la lista mediante la función .sort()
-    console.log(listaVideos.sort(
-        // .sort () envia dos númeos a comprar a la función anonima
-        function comparar(a, b) {
-            // Compara cuanto es la resta y si es negativo entonces a va delante de b [b, a]
-            return Number(b.id) - Number(a.id);
-        }
-    ));
-    
-    listaVideos.forEach(video => {
-        cuerpovideos.appendChild(
-            crearFicha(video.id, video.titulo, video.portada, video.idDrive)
-        );
-    }
-    );
-
-    // eliminarFichas();
 }
 
 obtenerYMostrarVideos();

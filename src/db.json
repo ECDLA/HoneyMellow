@@ -1,151 +1,142 @@
 {
     "videos": [
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "1pSToqzg6zj9D8pRKV6W-nd4QHIcPizhJ",
+            "tituloRomaji": "Mukatsuku -another story-",
+            "tituloEspañol": "[Irritante -otra historia-]",
             "id": "166",
-            "titulo": "Mukatsuku -another story- [Irritante -otra historia-]",
-            "portada": "IMG/Miniaturas/166.webp",
-            "url": "https://drive.google.com/file/d/1pSToqzg6zj9D8pRKV6W-nd4QHIcPizhJ/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/1pSToqzg6zj9D8pRKV6W-nd4QHIcPizhJ/view?usp=sharing"
         },
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "1e9iWG1MlHBzqTWK7lL20l6Ab7x51Y3-z",
+            "tituloRomaji": "Mukatsuku",
+            "tituloEspañol": "[Irritante]",
             "id": "163",
-            "titulo": "Mukatsuku [Irritante]",
-            "portada": "IMG/Miniaturas/163.webp",
-            "url": "https://drive.google.com/file/d/1e9iWG1MlHBzqTWK7lL20l6Ab7x51Y3-z/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/1e9iWG1MlHBzqTWK7lL20l6Ab7x51Y3-z/view?usp=sharing"
         },
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "1CJk0Qs0YbM4EjT84yM0dmbAOpsXAeEZH",
+            "tituloRomaji": "Ima, Koi ga Hajimare -another story-",
+            "tituloEspañol": "[Ahora, que comience este amor -otra historia-]",
             "id": "162",
-            "titulo": "Ima, Koi ga Hajimare -another story- [Ahora, que comience este amor -otra historia-]",
-            "portada": "IMG/Miniaturas/162.webp",
-            "url": "https://drive.google.com/file/d/1CJk0Qs0YbM4EjT84yM0dmbAOpsXAeEZH/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/1CJk0Qs0YbM4EjT84yM0dmbAOpsXAeEZH/view?usp=sharing"
         },
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "1zin3TxOGHaBHyscuVlhVFMs5wPuHvfcC",
+            "tituloRomaji": "Ima, Koi ga Hajimare",
+            "tituloEspañol": "[Ahora, que comience este amor]",
             "id": "161",
-            "titulo": "Ima, Koi ga Hajimare [Ahora, que comience este amor]",
-            "portada": "IMG/Miniaturas/161.webp",
-            "url": "https://drive.google.com/file/d/1zin3TxOGHaBHyscuVlhVFMs5wPuHvfcC/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/1zin3TxOGHaBHyscuVlhVFMs5wPuHvfcC/view?usp=sharing"
         },
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "1TXMwKOJkHCFwFqkeiu8_fPbPOX1PnSuL",
+            "tituloRomaji": "Kawaii ryu",
+            "tituloEspañol": "[Razones para ser linda]",
             "id": "160",
-            "titulo": "Kawaii ryu [Razones para ser linda]",
-            "portada": "IMG/Miniaturas/160.webp",
-            "url": "https://drive.google.com/file/d/1TXMwKOJkHCFwFqkeiu8_fPbPOX1PnSuL/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/1TXMwKOJkHCFwFqkeiu8_fPbPOX1PnSuL/view?usp=sharing"
         },
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "18AsvTijJYq-lbq5vFjtpvL-otq0MT9kF",
+            "tituloRomaji": "Hyoujou Kanri Test",
+            "tituloEspañol": "[Prueba para manejar la expresión facial]",
             "id": "159",
-            "titulo": "Hyoujou Kanri Test [Prueba para manejar la expresión facial]",
-            "portada": "IMG/Miniaturas/159.webp",
-            "url": "https://drive.google.com/file/d/18AsvTijJYq-lbq5vFjtpvL-otq0MT9kF/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/18AsvTijJYq-lbq5vFjtpvL-otq0MT9kF/view?usp=sharing"
         },
         {
-            "descripcion": "[Sin descripción]",
-            "idDrive": "1_9jQMvZe15PG437fD87XxwQIXh5vu5Mz",
+            "tituloRomaji": "Watashi, c-kun ga suki",
+            "tituloEspañol": "[A mí me gusta C-kun]",
             "id": "158",
-            "titulo": "Watashi, c-kun ga suki [A mí me gusta C-kun]",
-            "portada": "IMG/Miniaturas/158.webp",
-            "url": "https://drive.google.com/file/d/1_9jQMvZe15PG437fD87XxwQIXh5vu5Mz/view?usp=sharing"
+            "urlDrive": "https://drive.google.com/file/d/1_9jQMvZe15PG437fD87XxwQIXh5vu5Mz/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Julieta",
+            "tituloEspañol": "",
             "id": "96",
-            "titulo": "Julieta",
-            "portada": "IMG/Miniaturas/96.webp",
-            "url": "http://127.0.0.1:5501/VIDEO/96.html"
+            "urlDrive": "https://drive.google.com/file/d/1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Ao e",
+            "tituloEspañol": "[El azul]",
             "id": "95",
-            "titulo": "Ao e [El azul]",
-            "portada": "IMG/Miniaturas/95.webp",
-            "url": "http://127.0.0.1:5501/VIDEO/95.html"
+            "urlDrive": "https://drive.google.com/file/d/1sODfO8JM3I1X7UbFfr3ckSQk9LaXZrqG/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Sankaku Jealousy",
+            "tituloEspañol": "[Triángulo de celos]",
             "id": "94",
-            "titulo": "Sankaku Jealousy [Triángulo de celos]",
-            "portada": "IMG/Miniaturas/94.webp",
-            "url": "http://127.0.0.1:5501/VIDEO/94.html"
+            "urlDrive": "https://drive.google.com/file/d/1xoT0eHtIIst78Jnm3NN7DOw1wcyAAJQx/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Kawaii ne tte Iwarechatta",
+            "tituloEspañol": "[Me dijo que soy linda]",
             "id": "93",
-            "titulo": "Kawaii ne tte Iwarechatta [Me dijo que soy linda]",
-            "portada": "IMG/Miniaturas/93.webp",
-            "url": "http://127.0.0.1:5501/VIDEO/93.html"
+            "urlDrive": "https://drive.google.com/file/d/1ZY4xylQupziEHP0hRx-Tweuwrm_eH6jG/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Suki datta hito ni niteru kouhai",
+            "tituloEspañol": "[Una kouhai similar a la persona que me gustaba]",
             "id": "92",
-            "titulo": "Suki datta hito ni niteru kouhai [Una kouhai similar a la persona que me gustaba]",
-            "portada": "IMG/Miniaturas/92.webp",
-            "url": "http://127.0.0.1:5501/VIDEO/92.html"
+            "urlDrive": "https://drive.google.com/file/d/1AyxeTvj0aWN4Isf_GWxeeosWrUV6TY4n/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Oshi-Hen Nante Yurusanai!",
+            "tituloEspañol": "[¡No permitiré que cambies de idol favorito!]",
             "id": "91",
-            "titulo": "Oshi-Hen Nante Yurusanai! [¡No permitiré que cambies de idol favorito!]",
-            "portada": "IMG/Miniaturas/91.webp",
-            "url": "http://127.0.0.1:5501/VIDEO/91.html"
+            "urlDrive": "https://drive.google.com/file/d/1VWhm8VBcRBxu-MwjMxhBVyQSezFwiZWn/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "WELCOME SICKS",
+            "tituloEspañol": "[Bienvenidos, enfermos]",
             "id": "89",
-            "titulo": "WELCOME SICKS [Bienvenidos, enfermos]",
-            "portada": "IMG/Miniaturas/89.webp",
-            "url": "http://127.0.0.1:5501/#"
+            "urlDrive": "https://drive.google.com/file/d/1K38hPSliuGXpV5AhwpA0nAgpj7dJRnGx/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "TO FAMILY",
+            "tituloEspañol": "[Para la familia]",
             "id": "88",
-            "titulo": "TO FAMILY [Para la familia]",
-            "portada": "IMG/Miniaturas/88.webp",
-            "url": "http://127.0.0.1:5501/#"
+            "urlDrive": "https://drive.google.com/file/d/1_cr7vxR-mvubIg9I3hOOTB6jR_eJC8Hl/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Dear LAYLA",
+            "tituloEspañol": "[Querida Layla]",
             "id": "87",
-            "titulo": "Dear LAYLA [Querida Layla]",
-            "portada": "IMG/Miniaturas/87.webp",
-            "url": "http://127.0.0.1:5501/#"
+            "urlDrive": "https://drive.google.com/file/d/1rsvLgAxNKLC_b25Xaf6ZLdDsfeccZXiy/view?usp=sharing"
         },
         {
-            "descripcion": "lorem",
-            "idDrive": "1kZFK4zimZuaWVK2aJaB_tkBZw7jDQsdx",
+            "tituloRomaji": "Lens Goshi no Keshiki",
+            "tituloEspañol": "[El paisaje a través de los lentes]",
             "id": "86",
-            "titulo": "Lens Goshi no Keshiki [El paisaje a través de los lentes]",
-            "portada": "IMG/Miniaturas/86.webp",
-            "url": "http://127.0.0.1:5501/#"
-        }
-    ]
-}
- lentes]",
-            "portada": "IMG/Miniaturas/86.webp",
-            "url": "http://127.0.0.1:5501/#"
-        }
-    ]
-}és de los lentes]",
-            "portada": "IMG/Miniaturas/86.webp",
-            "url": "http://127.0.0.1:5501/#"
+            "urlDrive": "https://drive.google.com/file/d/1AONjRTmzivX_mBLNDwhWLTPTBWcgHblb/view?usp=sharing"
+        },
+        {
+            "tituloRomaji": "Erande Kurete Arigato",
+            "tituloEspañol": "[Gracias por elegirme]",
+            "id": "90",
+            "urlDrive": "https://drive.google.com/file/d/1DeYfkh5PQinj1cbOgiGIWv1COlmTz88v/view?usp=sharing"
+        },
+        {
+            "tituloRomaji": "Bokura wa Ai ni Koishite Ikiru",
+            "tituloEspañol": "[Vivimos enamorados del amor]",
+            "id": "157",
+            "urlDrive": "https://drive.google.com/file/d/1MO8Z5X0ILXvyWIz4LcR91kUPUwxld2cJ/view?usp=sharing"
+        },
+        {
+            "tituloRomaji": "Kimi wo kawaikusaseta no wa doko no doitsu",
+            "tituloEspañol": "[¿Quién hace que te pongas linda]",
+            "id": "156",
+            "urlDrive": "https://drive.google.com/file/d/1J97kErGLa-loh75HowMpO7HgMDVcCRs_/view?usp=sharing"
+        },
+        {
+            "tituloRomaji": "HALLOWEEN KISS",
+            "tituloEspañol": "[Halloween Kiss]",
+            "id": "155",
+            "urlDrive": "https://drive.google.com/file/d/12MPYTi2fFg-_WC3mNrKvWH_Im0vpGVJO/view?usp=sharing"
+        },
+        {
+            "tituloRomaji": "Whipped Cream no Shoumikigen",
+            "tituloEspañol": "[Fecha de caducidad de la crema batida]",
+            "id": "154",
+            "urlDrive": "https://drive.google.com/file/d/10h834zxSlQaIGcJf-FpCdsGuaA_382tS/view?usp=sharing"
+        },
+        {
+            "tituloRomaji": "Ikiteru tte Maji Yuushou!",
+            "tituloEspañol": "[¡Estar vivo es la verdadera victoria!]",
+            "id": "153",
+            "urlDrive": "https://drive.google.com/file/d/14PESrw83rQQHOTv2mr1wckwvy9O397ZB/view?usp=sharing"
         }
     ]
 }
