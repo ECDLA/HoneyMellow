@@ -1,5 +1,5 @@
 // const urlAPI = "https://mellow-api.azurewebsites.net/api/FunctionMellowAPI"
-const urlAPI = "/db.json"
+const urlAPI = "db.json"
 const cuerpovideos = document.querySelector("[data-videos]");
 let cacheDeVideos = null;
 
@@ -16,14 +16,17 @@ async function conexionAPI() {
     }
 }
 
-function crearFicha(id, tituloRomaji, tituloEspañol, portada, urlDrive) {
+function crearFicha(id, tituloRomaji, tituloEspañol, urlDrive, urlYoutube) {
     let ficha = document.createElement("div");
+    let idYoutube = obtenerIdVideo(urlYoutube);
+
     ficha.className = "video";
     ficha.innerHTML =
         `
-        <a href="https://drive.google.com/file/d/${obtenerIdDrive(urlDrive)}/preview" target="_blank">
+        <a href="https://drive.google.com/file/d/${obtenerIdVideo(urlDrive)}/preview" target="_blank">
             <figure class="imagen">
-                <img class="miniatura" class="miniatura" src="IMG/Miniaturas/${id}.webp" alt="" id="${id}">
+                <img class="miniatura" class="miniatura" src="https://img.youtube.com/vi/${idYoutube}/mqdefault.jpg" alt="" id="${id}">
+                
             </figure>
         </a>
 
@@ -48,69 +51,45 @@ async function obtenerYMostrarVideos() {
     console.log(listaVideos)
     listaVideos.forEach(video => {
         cuerpovideos.appendChild(
-            crearFicha(video.id, video.tituloRomaji, video.tituloEspañol, video.portada, video.urlDrive)
+            crearFicha(video.id, video.tituloRomaji, video.tituloEspañol, video.urlDrive, video.urlYoutube)
         );
     }
     );
-
-    // eliminarFichas();
 }
 
-function obtenerIdDrive(urlDrive) {
-    return urlDrive.slice(32, 65);
-}
+obtenerIdVideo("https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing")
 
-async function eliminarFichas() {
-    // let listaVideos = await conexionAPI();
-    let video = document.querySelectorAll(".imagen");
+function obtenerIdVideo(url) {
+    // Se crea un objeto usando la clase URL la cual ya conoce la estructura de una url por lo que sabe identificar partes claves como ".hostname".
+    const urlObjeto = new URL(url);
+    let idYoutube = "";
 
-    video.forEach(clases => clases.addEventListener("click", evento => {
-        let idVideo = evento.target.id;
+    // Usando la url ya convertida a objeto, ve si la url incluye o viene de "youtu.be".
+    if (urlObjeto.hostname.includes("youtu.be")) {
 
-        while (cuerpovideos.firstChild) {
-            cuerpovideos.removeChild(cuerpovideos.firstChild);
-        }
+        // Con .slice se recorre una posición para eliminar "/"
+        idYoutube = urlObjeto.pathname.slice(1);
 
-        mostrarVideo(idVideo);
-    }));
+    } else if (urlObjeto.hostname.includes("youtube.com")) {
 
+        // Busca dentro del objeto en "searchParams" el parametro "v" y retorna el valor con .get
+        idYoutube = urlObjeto.searchParams.get("v");
 
-}
-
-function hojaDeEstilosParaVideo(archivo = false) {
-    var elementoCSS = document.querySelector("[data-styles]");
-
-    if (archivo === true) {
-        elementoCSS.href = "CSS/styles-video.css";
+    } else if (urlObjeto.hostname.includes("drive.google.com")) {
+        idYoutube = urlObjeto
+            .pathname
+            .slice(8)
+            .replace("/view", "")
+            .replace("?usp=sharing", "")
+            .replace("/preview", "")
+        ;
+                
     } else {
-        elementoCSS.href = "CSS/styles.css";
+        console.log("Url de video incorrecta");
+        return null;
     }
-}
 
-async function mostrarVideo(idVideo) {
-    let listaVideos = await conexionAPI();
-    let videoEncontrado = listaVideos.find(video => video.id === idVideo);
-    let idDrive = videoEncontrado.idDrive;
-
-    let video = document.createElement("div");
-    video.className = "video-responsive";
-    video.innerHTML =
-        `
-       <iframe src="https://drive.google.com/file/d/${idDrive}/preview" frameborder="0" allowfullscreen></iframe>
-    `
-
-    let informacionVideo = document.createElement("div");
-    informacionVideo.id = "datos";
-    informacionVideo.innerHTML =
-        `
-        <h1>${videoEncontrado.id} - ${videoEncontrado.titulo}</h1>
-        <p id="contenido">${videoEncontrado.descripcion}</p>
-    `
-
-    // hojaDeEstilosParaVideo(true);
-    cuerpovideos.appendChild(video);
-    cuerpovideos.appendChild(informacionVideo);
+    return idYoutube;
 }
 
 obtenerYMostrarVideos();
-// eliminarFichas();
