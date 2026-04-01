@@ -10,7 +10,7 @@ const clienteAPI = new CosmosClient({
 const baseDeDatos = clienteAPI.database(process.env.COSMOS_DATABASE);
 const contenedor = baseDeDatos.container(process.env.COSMOS_CONTAINER);
 
-// context me devuelve los datos de y Azure
+// context me devuelve los datos de CosmosDB y Azure
 // req son los datos que manda el cliente
 module.exports = async function (context, req) {
     // Crea una constante la cual espere el resultado del await para introducir resources.
