@@ -113,6 +113,16 @@
     </style>
 </head>
 <body>
+    <script>
+        // Al cargar la página, hace una petición al Autenticador
+        fetch("http://localhost:7071/api/Autenticador")
+            .then(respuesta => {
+                if (respuesta.ok) {
+                    // Credenciales correctas, mostrar el formulario
+                }
+            });
+    </script>
+
     <header>
         <figure id="logo-padre">
             <a href="../index.html">

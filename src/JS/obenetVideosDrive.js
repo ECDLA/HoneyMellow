@@ -1,4 +1,4 @@
-const apiKEY = "AIzaSyC-wJ-3abe2dDao171zFIQW4hvLHNjKZfk"
+const apiKEY = ""
 const urlCarpetaDriveVideos = "https://drive.google.com/drive/u/0/folders/1laPxK8i4R2nKbn4BVUGFBViTSyGFWTv4"
 
 async function conexionAPI() {
@@ -12,5 +12,5 @@ async function conexionAPI() {
     let conexion = await fetch("https://www.googleapis.com/drive/v3/files?q='${folderId}'&pageSize=100&fields=files(id,name,description,mimeType,modifiedTime)`&key=${apiKey}`");
     let conexionConvertida = await conexion.json();
 
-    return
+    return conexionConvertida;
 }

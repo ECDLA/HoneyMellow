@@ -30,7 +30,7 @@ header {
 
 #logo-padre::after{
     text-decoration: none;
-    content: "V0.1.4-alpha";
+    content: "V0.1.5-alpha";
     letter-spacing: 1px;
     font-style: italic;    
     margin-left: -15px;
