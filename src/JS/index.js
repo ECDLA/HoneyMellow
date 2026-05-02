@@ -61,9 +61,9 @@ function obtenerIDVideo(url) {
 // Imagen YouTube: https://img.youtube.com/vi/${idVideo}/mqdefault.jpg
 function crearTarjetaVideo(numeracionDrive, tituloRomaji, tituloEspañol, urlDrive, urlYoutube) {
     let fichaDOM = document.createElement("div");
+    fichaDOM.className = "video"
     let idURL = obtenerIDVideo(urlDrive);
     let urlMiniatura = "";
-    console.log(urlYoutube)
 
     if (urlYoutube == "") {
         idURL = obtenerIDVideo(urlDrive);
