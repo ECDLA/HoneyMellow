@@ -62,20 +62,20 @@ function obtenerIDVideo(url) {
 function crearTarjetaVideo(numeracionDrive, tituloRomaji, tituloEspañol, urlDrive, urlYoutube) {
     let fichaDOM = document.createElement("div");
     fichaDOM.className = "video"
-    let idURL = obtenerIDVideo(urlDrive);
+    let idURLDrive = obtenerIDVideo(urlDrive);
     let urlMiniatura = "";
 
     if (urlYoutube == "") {
-        idURL = obtenerIDVideo(urlDrive);
-        urlMiniatura = `https://drive.google.com/thumbnail?id=${idURL}`
+        idURLDrive = obtenerIDVideo(urlDrive);
+        urlMiniatura = `https://drive.google.com/thumbnail?id=${idURLDrive}`
     } else {
-        idURL = obtenerIDVideo(urlYoutube);
-        urlMiniatura = `https://img.youtube.com/vi/${idURL}/mqdefault.jpg`
+        idURLYoutube = obtenerIDVideo(urlYoutube);
+        urlMiniatura = `https://img.youtube.com/vi/${idURLYoutube}/mqdefault.jpg`
     }
 
     fichaDOM.innerHTML =
         `
-        <a href="https://drive.google.com/file/d/${idURL}/preview" target="_blank">
+        <a href="https://drive.google.com/file/d/${idURLDrive}/preview" target="_blank">
             <figure class="imagen">
                 <img class="miniatura" class="miniatura" src="${urlMiniatura}" alt="" id="${numeracionDrive}">
                 
